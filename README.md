@@ -4,13 +4,13 @@ A full-stack invoice platform designed to simplify and enhance the billing exper
 
 ## Tech Stack
 
--   **Next.js 15: A React framework for building server-rendered or static web applications.**
--   **Mailtrap: For email testing and delivery simulation in development.**
--   **Neon Postgres: A cloud-based PostgreSQL database for fast, reliable data storage.**
--   **Prisma: An ORM to interact with the database efficiently and with type safety.**
--   **Tailwind CSS: A utility-first CSS framework for styling.**
--   **Auth.js: Authentication library to handle user login, signup, and sessions.**
--   **Shadcn/UI: A modern UI library for building beautiful and consistent interfaces.**
+-   **Next.js** 15: A React framework for building server-rendered or static web applications.
+-   **Mailtrap:** For email testing and delivery simulation in development.
+-   **Neon Postgres:** A cloud-based PostgreSQL database for fast, reliable data storage.
+-   **Prisma:** An ORM to interact with the database efficiently and with type safety.
+-   **Tailwind CSS:** A utility-first CSS framework for styling.
+-   **Auth.js:** Authentication library to handle user login, signup, and sessions.
+-   **Shadcn/UI:** A modern UI library for building beautiful and consistent interfaces.
 
 ## Features
 
