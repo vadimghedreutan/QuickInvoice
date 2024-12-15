@@ -45,7 +45,7 @@ export default async function Login() {
 									placeholder="email..."
 								/>
 							</div>
-							<SubmitButtons />
+							<SubmitButtons text="Login" />
 						</form>
 					</CardContent>
 				</Card>
