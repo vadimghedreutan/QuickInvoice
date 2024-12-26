@@ -8,7 +8,7 @@ interface iAppProps {
 	text: string
 }
 
-export function SubmitButtons({ text }: iAppProps) {
+export function SubmitButton({ text }: iAppProps) {
 	const { pending } = useFormStatus()
 	return (
 		<>

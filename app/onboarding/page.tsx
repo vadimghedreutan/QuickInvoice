@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { SubmitButtons } from "../components/SubmitButtons"
+import { SubmitButton } from "../components/SubmitButton"
 import { useActionState } from "react"
 import { onboardUser } from "../actions"
 import { useForm } from "@conform-to/react"
@@ -87,7 +87,7 @@ export default function OnboardingPage() {
 							</p>
 						</div>
 
-						<SubmitButtons text="Finish onboarding" />
+						<SubmitButton text="Finish onboarding" />
 					</form>
 				</CardContent>
 			</Card>
