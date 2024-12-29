@@ -116,7 +116,7 @@ export function EditInvoice({ data }: iAppProps) {
 						<div>
 							<Label>Currency</Label>
 							<Select
-								defaultValue="USD"
+								defaultValue="EUR"
 								name={fields.currency.name}
 								key={fields.currency.key}
 								onValueChange={(value) => setCurrency(value)}

@@ -13,6 +13,7 @@ import Link from "next/link"
 export default function VerifyPage() {
 	return (
 		<div className="min-h-screen w-full flex items-center justify-center">
+			<div className="absolute top-0 z-[-2] h-screen w-screen rotate-180 transform bg-white bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]"></div>
 			<Card className="w-[380px] px-5">
 				<CardHeader className="text-center">
 					<div className="mb-4 mx-auto flex size-20 items-center justify-center rounded-full bg-blue-100">

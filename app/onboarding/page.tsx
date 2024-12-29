@@ -31,6 +31,7 @@ export default function OnboardingPage() {
 	})
 	return (
 		<div className="flex items-center justify-center min-h-screen w-screen">
+			<div className="absolute top-0 z-[-2] h-screen w-screen rotate-180 transform bg-white bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]"></div>
 			<Card className="max-w-sm mx-auto">
 				<CardHeader>
 					<CardTitle className="text-xl">

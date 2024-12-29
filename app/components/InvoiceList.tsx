@@ -14,6 +14,7 @@ import { formatCurrency } from "../utils/formatCurrency"
 import { Badge } from "@/components/ui/badge"
 
 async function getData(userId: string) {
+	// await new Promise((resolve) => setTimeout(resolve, 1000))
 	const data = await prisma.invoice.findMany({
 		where: {
 			userId: userId,
