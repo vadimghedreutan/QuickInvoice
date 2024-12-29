@@ -59,7 +59,7 @@ export function CreateInvoice({
 	const [selectedDate, setSelectedDate] = useState(new Date())
 	const [rate, setRate] = useState("")
 	const [quantity, setQuantity] = useState("")
-	const [currency, setCurrency] = useState("USD")
+	const [currency, setCurrency] = useState("EUR")
 
 	const calcualteTotal = (Number(quantity) || 0) * (Number(rate) || 0)
 
@@ -142,7 +142,7 @@ export function CreateInvoice({
 						<div>
 							<Label>Currency</Label>
 							<Select
-								defaultValue="USD"
+								defaultValue="EUR"
 								name={fields.currency.name}
 								key={fields.currency.key}
 								onValueChange={(value) => setCurrency(value)}
