@@ -89,9 +89,38 @@ pdf.text("Total", 160, 113);   // Adjusted y-coordinate for alignment
 // Draw header line
 pdf.line(20, 115, 190, 115); // Adjust line to align with headers
 
-// Item Details
-pdf.setFont("helvetica", "normal");
-pdf.text(data.invoiceItemDescription, 20, 105); // Description in a separate line
+// Limit the description to 150 characters
+const maxCharacters = 100;
+let description: string = data.invoiceItemDescription; // Replace with your actual data source
+description = description.substring(0, maxCharacters - 3) + "...";
+
+// Wrap the text into lines of 50 characters each
+const maxLineLength = 100; // Limit to 50 characters per line
+const wrapText = (text: string, maxLineLength: number): string[] => {
+  const lines: string[] = [];
+  while (text.length > 0) {
+    let line = text.slice(0, maxLineLength);
+    text = text.slice(maxLineLength);
+    lines.push(line);
+  }
+  return lines;
+};
+
+const wrappedText: string[] = wrapText(description, maxLineLength);
+
+// Variables for positioning
+const startX = 20;
+let startY = 105;
+pdf.setFontSize(10); // Set font size
+const lineSpacing = 10 * 0.5; // Line spacing proportional to font size
+
+// Print each line in the PDF
+wrappedText.forEach((line: string) => {
+  pdf.text(line, startX, startY);
+  startY += lineSpacing; // Move to the next line
+});
+
+// Print the rest of the item details
 pdf.text(data.invoiceItemQuantity.toString(), 100, 120); // Adjusted for alignment
 pdf.text(
   formatCurrency({
@@ -118,11 +147,25 @@ pdf.text(
   );
 
   //Additional Note
-  if (data.note) {
+  // Additional Note
+if (data.note) {
     pdf.setFont("helvetica", "normal");
     pdf.setFontSize(10);
+  
+    // Add the "Note:" label
     pdf.text("Note:", 20, 150);
-    pdf.text(data.note, 20, 155);
+  
+    // Wrap the note text into lines of 50 characters
+    const maxLineLength = 150;
+    const wrappedNote = wrapText(data.note, maxLineLength);
+    const lineSpacing = 10 * 0.5;
+  
+    // Print each line of the wrapped note
+    let startY = 155; // Starting Y position for the note text
+    wrappedNote.forEach((line) => {
+      pdf.text(line, 20, startY);
+      startY += lineSpacing; // Increment Y position for the next line
+    });
   }
 
   // generate pdf as buffer

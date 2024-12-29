@@ -1,0 +1,19 @@
+feat: implement PDF generation functionality
+ 
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Sun Dec 29 12:06:47 2024 +0100
+#
+# On branch main
+# Your branch is ahead of 'origin/main' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   app/actions.ts
+#	new file:   app/api/invoice/[invoiceId]/route.ts
+#	modified:   app/dashboard/invoices/create/page.tsx
+#	modified:   app/login/page.tsx
+#	modified:   package.json
+#	modified:   pnpm-lock.yaml
+#

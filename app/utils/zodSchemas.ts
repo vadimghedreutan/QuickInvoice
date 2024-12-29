@@ -34,7 +34,7 @@ export const invoiceSchema = z.object({
 
   note: z.string().optional(),
 
-  invoiceItemDescription: z.string().min(1, "Description is required"),
+  invoiceItemDescription: z.string().min(1, "Description is required").max(100, "Description must not exceed 100 characters"),
 
   invoiceItemQuantity: z.number().min(1, "Qunatity min 1"),
 
