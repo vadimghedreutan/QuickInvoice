@@ -86,7 +86,10 @@ export async function createInvoice(prevState: any, formData: FormData) {
                 amount: submission.value.total,
                 currency: submission.value.currency as any,
             }),
-            invoiceLink: "Test_InvoiceLink"
+            invoiceLink:
+              process.env.NODE_ENV !== "production"
+                ? `http://localhost:3000/api/invoice/${data.id}`
+                : ``,
                 
             },  
       });

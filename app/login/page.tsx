@@ -9,7 +9,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { auth, signIn } from "../utils/auth"
-import { SubmitButtons } from "../components/SubmitButton"
+import { SubmitButton } from "../components/SubmitButton"
 import { redirect } from "next/navigation"
 
 export default async function Login() {
@@ -45,7 +45,7 @@ export default async function Login() {
 									placeholder="email..."
 								/>
 							</div>
-							<SubmitButtons text="Login" />
+							<SubmitButton text="Login" />
 						</form>
 					</CardContent>
 				</Card>
