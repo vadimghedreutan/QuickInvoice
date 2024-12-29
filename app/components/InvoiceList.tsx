@@ -11,7 +11,7 @@ import prisma from "../utils/db"
 import { requireUser } from "../utils/hooks"
 import { EmptyState } from "./EmptyState"
 import { formatCurrency } from "../utils/formatCurrency"
-import { Badge } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
 
 async function getData(userId: string) {
 	const data = await prisma.invoice.findMany({
