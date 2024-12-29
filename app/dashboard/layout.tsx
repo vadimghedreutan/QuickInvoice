@@ -50,9 +50,10 @@ export default async function DashboardLayout({
 					<div className="flex flex-col max-h-screen h-full gap-2">
 						<div className="h-14 flex items-center border-b px-4 lg:h-[60px] lg:px-6">
 							<Link href="/" className="flex items-center gap-2">
-								<h2 className="text-2xl font-bold text-gray-900">
-									QuickInvoice
-								</h2>
+								<h1 className="text-4xl text-gray-800 font-thunder_hc tracking-wider">
+									<span className="text-blue-600">Pay</span>
+									<span className="text-gray-900">Track</span>
+								</h1>
 							</Link>
 						</div>
 						<div className="flex-1">
@@ -75,7 +76,16 @@ export default async function DashboardLayout({
 								</Button>
 							</SheetTrigger>
 							<SheetContent side="left">
-								<DialogTitle>QuickInvoice</DialogTitle>
+								<DialogTitle asChild>
+									<h1 className="text-3xl font-thunder_hc tracking-wider text-gray-800">
+										<span className="text-blue-600">
+											Pay
+										</span>
+										<span className="text-gray-900">
+											Track
+										</span>
+									</h1>
+								</DialogTitle>
 								<nav className="grid gap-2 mt-10">
 									<DashboardLinks />
 								</nav>
